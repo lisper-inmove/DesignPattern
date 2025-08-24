@@ -1,18 +1,16 @@
 #include <vector>
 #include <iostream>
-#include "abstract_factory.h"
+#include "builder.h"
 
 using namespace std;
 
 int main()
 {
-	FurnitureFactory* factory = new VictorianFactory();
-	Chair* chair = factory->createChair();
-	chair->sitOn();
-	Sofa* sofa = factory->createSofa();
-	sofa->lieOn();
-	CoffeeTable* table = factory->createCoffeeTable();
-	table->putOn();
-
+	Director director;
+	SportsCarBuilder sportsBuilder;
+	director.setBuilder(&sportsBuilder);
+	director.makeSportsCar();
+	Car car = sportsBuilder.getResult();
+	car.list();
 	return 0;
 }
