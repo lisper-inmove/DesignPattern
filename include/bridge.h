@@ -9,6 +9,8 @@
 
 	Remote 作为基础的远程控制器，定义了基本的操作接口，如开关、调节音量和频道等。
 	AdvancedRemote 作为 Remote 的扩展，增加了静音功能。
+
+	https://www.cnblogs.com/coodream2009/p/17714431.html
 */
 
 #include <string>
